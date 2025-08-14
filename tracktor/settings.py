@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "themoviedb",
     "user_profile",
     "social",
+    "ui",
 ]
 
 MIDDLEWARE = [

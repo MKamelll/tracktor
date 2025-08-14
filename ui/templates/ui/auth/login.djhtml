@@ -1,0 +1,10 @@
+{% extends "ui/base.djhtml" %}
+
+{% block title %}
+    Login
+{% endblock title %}
+
+
+{% block content %}
+    
+{% endblock content %}
