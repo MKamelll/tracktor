@@ -3,7 +3,7 @@ from django.contrib.admin.exceptions import AlreadyRegistered
 from django.apps import apps
 
 # Register your models here.
-app = apps.get_app_config(app_label="user_profile")
+app = apps.get_app_config(app_label="social")
 
 for model in app.get_models():
     try:

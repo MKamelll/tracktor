@@ -6,7 +6,7 @@ from themoviedb import models as themoviedb_models
 # Create your models here.
 class Post(models.Model):
     text = models.TextField()
-    image = models.TextField(null=True)
+    image = models.CharField(max_length=255, null=True)
     profile = models.ForeignKey(
         to=profile_models.Profile, on_delete=models.CASCADE, related_name="posts"
     )
@@ -19,7 +19,7 @@ class Post(models.Model):
 
 class Comment(models.Model):
     text = models.TextField()
-    image = models.TextField(null=True)
+    image = models.CharField(max_length=255, null=True)
     post = models.ForeignKey(to=Post, on_delete=models.CASCADE, related_name="comments")
     profile = models.ForeignKey(
         to=profile_models.Profile, on_delete=models.CASCADE, related_name="comments"
