@@ -1,0 +1,33 @@
+{% extends "ui/base.djhtml" %}
+{% block title %}
+    home
+{% endblock title %}
+{% block content %}
+    <div class="min-w-screen">
+        <div class="drawer">
+            <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+            <div class="drawer-content">
+                <div class="navbar bg-base-200 w-full">
+                    <label for="my-drawer" class="btn btn-ghost text-xl drawer-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </label>
+                    <label class="btn btn-ghost text-xl">Dashboard</label>
+                </div>
+            </div>
+            <div class="drawer-side">
+                <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+                <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+                    <!-- Sidebar content here -->
+                    <li>
+                        <a>Sidebar Item 1</a>
+                    </li>
+                    <li>
+                        <a>Sidebar Item 2</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

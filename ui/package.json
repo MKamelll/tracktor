@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npx @tailwindcss/cli -i ./static/ui/css/input.css -o ./static/ui/css/output.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "prettier": "^3.6.2"
+    "@tailwindcss/cli": "^4.1.12",
+    "daisyui": "^5.0.50",
+    "prettier": "^3.6.2",
+    "tailwindcss": "^4.1.12"
   }
 }

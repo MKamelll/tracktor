@@ -1,5 +1,6 @@
 # Created by https://www.gitignore.io
 node_modules
+output.css
 
 ### OSX ###
 .DS_Store

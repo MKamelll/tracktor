@@ -4,8 +4,18 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request: HttpRequest) -> HttpResponse:
-    return HttpResponse("fuck off")
+    if not request.user.is_authenticated:
+        return login(request)
+    return dashboard(request)
 
 
-def login(req: HttpRequest) -> HttpResponse:
-    return render(request=req, template_name="ui/auth/login.djhtml")
+def signup(request: HttpRequest) -> HttpResponse:
+    return render(request=request, template_name="ui/auth/signup.djhtml")
+
+
+def login(request: HttpRequest) -> HttpResponse:
+    return render(request=request, template_name="ui/auth/login.djhtml")
+
+
+def dashboard(request: HttpRequest) -> HttpResponse:
+    return render(request=request, template_name="ui/dashboard/home.djhtml")

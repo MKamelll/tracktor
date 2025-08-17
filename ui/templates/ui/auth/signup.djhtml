@@ -1,0 +1,21 @@
+{% extends "ui/base.djhtml" %}
+{% block title %}
+  signup
+{% endblock title %}
+{% block content %}
+  <div class="min-h-screen flex flex-col justify-center items-center">
+    <form class="grid w-96 gap-4" method="POST">
+      <h2 class="text-2xl text-center">Tracktor</h2>
+      <label class="input w-full">
+        <input type="text" required placeholder="Username" />
+      </label>
+      <label class="input w-full">
+        <input type="password" required placeholder="Password" />
+      </label>
+      <label class="input w-full">
+        <input type="password" required placeholder="Confirm Password" />
+      </label>
+      <button type="submit" class="btn btn-primary w-full">Sign Up</button>
+    </form>
+  </div>
+{% endblock content %}
