@@ -1,0 +1,10 @@
+{% extends "ui/components/drawer.djhtml" %}
+{% block title %}
+    Breaking Bad
+{% endblock title %}
+{% block drawer_title %}
+    Breaking Bad
+{% endblock drawer_title %}
+{% block drawer_content %}
+    <h1>breaking bad</h1>
+{% endblock drawer_content %}

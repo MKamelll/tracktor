@@ -19,3 +19,7 @@ def login(request: HttpRequest) -> HttpResponse:
 
 def dashboard(request: HttpRequest) -> HttpResponse:
     return render(request=request, template_name="ui/dashboard/home.djhtml")
+
+
+def tvshow(request: HttpRequest) -> HttpResponse:
+    return render(request=request, template_name="ui/tvshow/details.djhtml")
