@@ -1,0 +1,37 @@
+{% extends "ui/base.djhtml" %}
+{% block title %}
+{% endblock title %}
+{% block content %}
+    <div class="min-w-screen">
+        <div class="drawer">
+            <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+            <div class="drawer-content">
+                <div class="navbar bg-base-200 w-full">
+                    <label for="my-drawer" class="btn btn-ghost text-xl drawer-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </label>
+                    <label class="btn btn-ghost text-xl">
+                        {% block drawer_title %}
+                        {% endblock drawer_title %}
+                    </label>
+                </div>
+                {% block drawer_content %}
+                {% endblock drawer_content %}
+            </div>
+            <div class="drawer-side">
+                <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+                <ul class="menu bg-base-200 text-base-content min-h-full w-80 gap-4">
+                    <div class="mt-2">{% include "ui/components/search.djhtml" %}</div>
+                    <li>
+                        <a>Profile</a>
+                        <a>Settings</a>
+                        <div class="divider"></div>
+                        <a>Log Out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
