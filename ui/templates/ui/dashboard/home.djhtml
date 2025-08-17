@@ -15,16 +15,19 @@
                     </label>
                     <label class="btn btn-ghost text-xl">Dashboard</label>
                 </div>
+                <div class="grid grid-cols-3 gap-4 m-4">
+                    {% include "ui/components/card.djhtml" with title="Breaking Bad" button_label="view" %}
+                </div>
             </div>
             <div class="drawer-side">
                 <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-                <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
-                    <!-- Sidebar content here -->
+                <ul class="menu bg-base-200 text-base-content min-h-full w-80 gap-4">
+                    <div class="mt-2">{% include "ui/components/search.djhtml" %}</div>
                     <li>
-                        <a>Sidebar Item 1</a>
-                    </li>
-                    <li>
-                        <a>Sidebar Item 2</a>
+                        <a>Profile</a>
+                        <a>Settings</a>
+                        <div class="divider"></div>
+                        <a>Log Out</a>
                     </li>
                 </ul>
             </div>
