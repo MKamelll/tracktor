@@ -1,10 +1,30 @@
 {% extends "ui/components/drawer.djhtml" %}
 {% block title %}
-    Breaking Bad
+    {{ name }}
 {% endblock title %}
 {% block drawer_title %}
-    Breaking Bad
+    {{ name }}
 {% endblock drawer_title %}
 {% block drawer_content %}
-    <h1>breaking bad</h1>
+    <div class="flex flex-row m-4 gap-4 bg-base-100">
+        <div class ="flex-1/5">
+            <img src="{{ poster_path }}" alt="poster">
+        </div>
+        <div class="flex flex-col flex-4/5">
+            <div class="bg-base-200">
+                <p class="m-4">{{ overview }}</p>
+            </div>
+            <div class="flex flex-col">
+                <div role="tablist" class="flex-1 tabs tabs-border">
+                    {% for season in seasons %}
+                        {% if forloop.first %}
+                            <a role="tab" class="tab tab-active">{{ season }}</a>
+                        {% else %}
+                            <a role="tab" class="tab">{{ season }}</a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock drawer_content %}

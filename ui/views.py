@@ -22,4 +22,12 @@ def dashboard(request: HttpRequest) -> HttpResponse:
 
 
 def tvshow(request: HttpRequest) -> HttpResponse:
-    return render(request=request, template_name="ui/tvshow/details.djhtml")
+    context = {
+        "name": "Breaking Bad",
+        "poster_path": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOcWkpWG_NRrU2M8-WB8EbEcJk7smhdrY1eO0ttKXm0bo2ooOEWxk3zBSbsFrSgSJh2OEKOQ",
+        "overview": "Walter White, a chemistry teacher, discovers that he has cancer and decides to get into the meth-making business to repay his medical debts. His priorities begin to change when he partners with Jesse.",
+        "seasons": [1, 2, 3, 4, 5],
+    }
+    return render(
+        request=request, template_name="ui/tvshow/details.djhtml", context=context
+    )
