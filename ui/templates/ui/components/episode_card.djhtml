@@ -1,0 +1,14 @@
+<div class="card flex flex-row bg-base-200 w-full shadow-sm">
+    <figure class="flex-1 justify-start">
+        <img src="{{ img_src }}" alt="Shoes" />
+    </figure>
+    <div class="card-body flex-2">
+        <div class="flex flex-col">
+            <h2 class="card-title">{{ title }}</h2>
+            <p class="text-sm">{{ overview }}</p>
+        </div>
+        <div class="card-actions justify-end">
+            <button class="btn btn-primary">{{ button_label }}</button>
+        </div>
+    </div>
+</div>

@@ -1,11 +1,13 @@
-<div class="card bg-base-200 w-96 shadow-sm">
-    <figure>
-        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+<div class="card flex flex-col bg-base-200 justify-around items-center max-h-64 max-w-64 shadow-sm">
+    <figure class="flex-8">
+        <img src="{{ img_src }}" alt="tvshow_poster" class="object-contain" />
     </figure>
-    <div class="card-body">
-        <h2 class="card-title">{{ title }}</h2>
-        <div class="card-actions justify-end">
-            <button class="btn btn-primary">{{ button_label }}</button>
+    <div class="card-body flex-1">
+        <div class="flex flex-row justify-start items-center gap-6">
+            <h2 class="card-title flex-4">{{ title }}</h2>
+            <div class="card-actions">
+                <button class="btn btn-primary">{{ button_label }}</button>
+            </div>
         </div>
     </div>
 </div>

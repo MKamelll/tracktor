@@ -17,11 +17,10 @@
             <div class="flex flex-col">
                 <div role="tablist" class="flex-1 tabs tabs-border">
                     {% for season in seasons %}
-                        {% if forloop.first %}
-                            <a role="tab" class="tab tab-active">{{ season }}</a>
-                        {% else %}
-                            <a role="tab" class="tab">{{ season }}</a>
-                        {% endif %}
+                        <a role="tab" class="{% if forloop.first %}tab tab-active{% else %}tab{% endif %}">{{ forloop.counter }}</a>
+                        <div class="tab-content border-base-300 bg-base-100 p-10">
+                            {% include "ui/components/episode_card.djhtml" with title=episode_title overview=episode_overview img_src=still_path button_label="view" %}
+                        </div>
                     {% endfor %}
                 </div>
             </div>

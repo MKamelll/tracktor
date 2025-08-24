@@ -6,7 +6,7 @@
     Dashboard
 {% endblock drawer_title %}
 {% block drawer_content %}
-    <div class="grid grid-cols-3 gap-4 m-4">
-        {% include "ui/components/card.djhtml" with title="Breaking Bad" button_label="view" %}
+    <div class="flex flex-row gap-4 m-4">
+        {% include "ui/components/card.djhtml" with title=name img_src=poster_path button_label="view" %}
     </div>
 {% endblock drawer_content %}
